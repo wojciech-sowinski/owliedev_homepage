@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlnsDc="http://purl.org/dc/elements/1.1/"
+   xmlnsCc="http://creativecommons.org/ns#"
+   xmlnsRdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlnsSvg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlnsSodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlnsInkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg941"
+   version="1.1"
+   viewBox="0 0 126.58752 19.397928"
+   height="73.315002"
+   width="478.44101"
+   sodipodiDocname="logo-vert-1000-2.svg"
+   inkscapeVersion="0.92.4 (5da689c313, 2019-01-14)">
+  <sodipodiNamedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscapePageopacity="0"
+     inkscapePageshadow="2"
+     inkscapeWindow-width="1920"
+     inkscapeWindow-height="1017"
+     id="namedview13"
+     showgrid="false"
+     inkscapeZoom="1.1025427"
+     inkscapeCx="12.55598"
+     inkscapeCy="80.909491"
+     inkscapeWindow-x="-8"
+     inkscapeWindow-y="-8"
+     inkscapeWindow-maximized="1"
+     inkscapeCurrent-layer="svg941" />
+  <defs
+     id="defs935" />
+  <metadata
+     id="metadata938">
+    <rdfRDF>
+      <ccWork
+         rdfAbout="">
+        <dcformat>image/svg+xml</dcformat>
+        <dctype
+           rdfResource="http://purl.org/dc/dcmitype/StillImage" />
+        <dctitle></dctitle>
+      </ccWork>
+    </rdfRDF>
+  </metadata>
+  <text
+     id="text920"
+     y="16.005627"
+     x="74.891342"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.76742363px;line-height:125%;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#dfdfdf;fill-opacity:1;stroke:none;stroke-width:0.77616215px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+     xmlSpace="preserve"
+     transform="scale(1.0000025,0.99999751)"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Rajdhani;-inkscape-font-specification:Rajdhani;letter-spacing:0.54239589px;fill:#dfdfdf;stroke:none;stroke-width:0.77616215px;fill-opacity:1;"
+       y="16.005627"
+       x="75.162544"
+       id="tspan918">owlieDev.pl</tspan></text>
+  <rect
+     y="0.55526811"
+     x="0.55526882"
+     height="18.28739"
+     width="18.28739"
+     id="rect922"
+     style="fill:none;fill-rule:evenodd;stroke:#dfdfdf;stroke-width:1.11053765;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  <text
+     transform="matrix(0,0.98327188,-1.0170127,0,0,0)"
+     id="text926"
+     y="-4.2683458"
+     x="5.2577338"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.0882206px;line-height:125%;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#dfdfdf;fill-opacity:1;stroke:none;stroke-width:0.61664337px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+     xmlSpace="preserve"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-family:Roboto;-inkscape-font-specification:'Roboto Light';fill:#dfdfdf;stroke:none;stroke-width:0.61664337px;fill-opacity:1;"
+       y="-4.2683458"
+       x="5.2577338"
+       id="tspan924">};</tspan></text>
+  <text
+     xmlSpace="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.0882206px;line-height:125%;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#dfdfdf;fill-opacity:1;stroke:none;stroke-width:0.61664337px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+     x="15.120923"
+     y="-3.7251682"
+     id="text930"
+     transform="matrix(0,0.98327188,-1.0170127,0,0,0)"><tspan
+       id="tspan928"
+       x="15.120923"
+       y="-3.7251682"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-family:Roboto;-inkscape-font-specification:'Roboto Light';fill:#dfdfdf;stroke:none;stroke-width:0.61664337px;fill-opacity:1;">&gt;</tspan></text>
+</svg>

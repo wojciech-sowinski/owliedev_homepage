@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100;300;600;700&family=Ibarra+Real+Nova:wght@400;600;700&family=Inria+Serif:wght@300;400;700&family=Lovers+Quarrel&family=Oswald:wght@200;300;600&display=swap");
+
+/* font-family: 'Antonio', sans-serif;
+font-family: 'Ibarra Real Nova', serif;
+font-family: 'Inria Serif', serif;
+font-family: 'Lovers Quarrel', cursive;
+font-family: 'Oswald', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 18px;
+  font-family: "Antonio", sans-serif;
+  --lightGray: #dfdfdf;
+  --gray: #666;
+  --darkGray: #2e3337;
+  --pink: #dc143c;
+  --mint: #37ccae;
+}
+
+.App {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    url("../media/img/background.jpg");
+  background-color: aliceblue;
+  // background-size: cover;
+  color: var(--darkGray);
+  transition: 0.3s;
+  overflow-x: hidden;
+  .App-header {
+    position: relative;
+  }
+  .pink {
+    color: var(--pink);
+  }
+  a {
+    color: var(--pink);
+    text-decoration: none;
+  }
+  .page-container {
+    width: 100%;
+    min-height: 100vh;
+  }
+}
+
+#dark {
+  transition: 0.3s;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("../media/img/background.jpg");
+}

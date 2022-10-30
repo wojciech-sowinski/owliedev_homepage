@@ -1,0 +1,33 @@
+.progres-hover {
+  background-image: linear-gradient(
+    to left,
+    var(--gray) 0%,
+    var(--gray) 47%,
+    #000 48%,
+    #000 52%,
+    #dc143c 53%,
+    #dc143c 100%
+  );
+  background-size: 250%;
+  background-position: 100%;
+  transition: 1s;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  &:hover {
+    left: 0%;
+    transition: 1s;
+    background-position: 0%;
+  }
+}
+
+#dark .progres-hover {
+  background-image: linear-gradient(
+    to left,
+    var(--lightGray) 0%,
+    var(--lightGray) 47%,
+    #000 48%,
+    #000 52%,
+    #dc143c 53%,
+    #dc143c 100%
+  );
+}

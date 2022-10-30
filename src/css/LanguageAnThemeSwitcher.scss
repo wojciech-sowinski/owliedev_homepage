@@ -1,0 +1,30 @@
+.language-theme-mode {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  column-gap: 10px;
+  filter: grayscale(100%);
+  transition: 0.3s;
+  .language-picker {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &:hover {
+    filter: grayscale(0%);
+    .react-switch-handle {
+      background-color: var(--pink) !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .language-theme-mode {
+    filter: grayscale(0%);
+  }
+}

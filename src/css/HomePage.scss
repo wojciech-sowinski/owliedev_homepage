@@ -1,0 +1,128 @@
+.home-page {
+  padding: 0;
+  .hello {
+    display: block;
+    text-align: center;
+    width: 100%;
+    font-size: 18rem;
+    margin-top: 10px;
+    margin-bottom: -200px;
+    font-family: "Lovers Quarrel", cursive;
+    color: var(--gray);
+    background: url("../media/img/gray-dot-2.png");
+
+    // background: url("../media/img/vsgif_com__.1860924.gif") repeat;
+    // background-size: 100%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+  .home-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--darkGray);
+    font-family: "Antonio", sans-serif;
+    font-weight: 600;
+    div:first-child,
+    div:last-child {
+      max-width: 400px;
+      font-size: 2.5rem;
+      text-align: right;
+      letter-spacing: -2px;
+    }
+    div:last-child {
+      text-align: left;
+    }
+
+    div img {
+      width: 450px;
+    }
+  }
+}
+
+#dark .home-page {
+  .hello {
+    filter: brightness(40%);
+  }
+  .home-info {
+    color: var(--lightGray);
+    div img {
+      filter: brightness(65%);
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .home-page {
+    .hello {
+      font-size: 15rem;
+      margin-bottom: -160px;
+    }
+    .home-info {
+      padding: 0 30px;
+      div:first-child,
+      div:last-child {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .home-page {
+    .hello {
+      font-size: 12rem;
+      margin-bottom: -300px;
+    }
+    .home-info {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      div:first-child,
+      div:last-child {
+        margin: 30px;
+        max-width: 90%;
+        font-size: 2.5rem;
+        text-align: left;
+        letter-spacing: -2px;
+        order: 2;
+      }
+      div:last-child {
+        order: 3;
+      }
+      div img {
+        width: 450px;
+        order: 1;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .home-page {
+    .hello {
+      font-size: 6rem;
+      margin-bottom: -150px;
+    }
+    .home-info {
+      div img {
+        width: 250px;
+      }
+      div:first-child,
+      div:last-child {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 480px) {
+  .home-page {
+    .hello {
+      font-size: 4rem;
+      margin-bottom: -100px;
+    }
+    .home-info {
+      div img {
+        width: 150px;
+      }
+    }
+  }
+}
