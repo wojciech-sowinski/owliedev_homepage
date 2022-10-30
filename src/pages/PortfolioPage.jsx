@@ -11,6 +11,9 @@ import portfolioImgPolk from '../media/img/komornkpolkowska.png'
 import portfolioImgMachy from '../media/img/machymachy.png'
 import portfolioImgSzym from '../media/img/komotrnikszymczak.png'
 
+// import { ReactComponent as ReactLogo } from '../media/img/logo-react.svg'
+// import { ReactComponent as NodeLogo } from '../media/img/logo-nodejs.svg'
+
 //deendencies
 import { motion } from "framer-motion"
 import { useI18n } from 'react-simple-i18n'
