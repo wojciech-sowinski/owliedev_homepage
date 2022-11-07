@@ -13,6 +13,8 @@ import HomePage from './pages/HomePage';
 import PortfolioPage from './pages/PortfolioPage';
 import { click } from '@testing-library/user-event/dist/click';
 import ContactPage from './pages/ContactPage';
+import { BottomNav } from './components/BottomNav';
+import AnimatedInfoPortal from './components/AnimatedInfoPortal';
 
 function App() {
 
@@ -52,8 +54,10 @@ function App() {
 
   return (
     <div className="App" id={darkMode ? 'dark' : ''}>
+
       <header className="App-header">
         <MainNav darkMode={darkMode} toogleDarkModeHandle={toogleDarkModeHandle} />
+
       </header>
       <main>
         <div className='page-container'>
@@ -64,9 +68,15 @@ function App() {
               <Route path='/contact' element={<ContactPage />} />
               <Route path='*' element={<HomePage />} />
             </Routes>
+
           </AnimatePresence>
         </div>
+
       </main>
+      <footer>
+        <BottomNav />
+      </footer>
+
     </div>
   );
 }

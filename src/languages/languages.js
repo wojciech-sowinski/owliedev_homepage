@@ -10,8 +10,8 @@ const langData = {
       designPattern:'Design made on the pattern',
       homepage:'Homepage',
       homePageAndStore:'The home page and shop of the Muzykalnasowa.pl project.',
-      invalidEmailMessage:'the email address is incorrect',
-      requredFieldMessage:'this field is required',
+      invalidEmailMessage:'* the email address is incorrect',
+      requredFieldMessage:'* this field is required',
       homeInfo:{
         text1:'Hello. Do you want to have your place on the web? Expand your sales by transferring it to the Internet?',
         text2:'Or maybe you want to present your company by making it easier for customers to contact you?'
@@ -29,7 +29,6 @@ const langData = {
         contact:'contact',
         seePortfolio:'see my portfolio',
         getCv:'download cv'
-
       },
     },
     pl: {
@@ -43,8 +42,8 @@ const langData = {
       designPattern:'Projekt wykonany na wzór',
       homepage:'Strona domowa',
       homePageAndStore:'Strona domowa i sklep projektu Muzykalnasowa.pl.',
-      invalidEmailMessage:'adres email jest niepawidłowy',
-      requredFieldMessage:'to pole jest wymagane',
+      invalidEmailMessage:'* adres email jest niepawidłowy',
+      requredFieldMessage:'* to pole jest wymagane',
       homeInfo:{
         text1:'Chcesz mieć swoje miejsce w sieci? Poszerzyć swoją sprzedaż przenosząc ją do internetu?',
         text2:'Chcesz zaprezentować swoją firmę ułatwiając klientom kontakt z Tobą?'

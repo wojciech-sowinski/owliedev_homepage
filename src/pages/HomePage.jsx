@@ -9,6 +9,9 @@ import { motion } from "framer-motion"
 import PageNameSpan from '../components/PageNameSpan'
 import { BottomNav } from '../components/BottomNav'
 import { useI18n } from 'react-simple-i18n'
+import { NavLink, Link } from 'react-router-dom';
+import AnimatedInfoPortal from '../components/AnimatedInfoPortal'
+import InfoBar from '../components/InfoBar'
 
 const HomePage = () => {
 
@@ -41,10 +44,10 @@ const HomePage = () => {
                 >
                     <span>
                         {t('homeInfo.text2')} </span>
-                    <a href="mailto:wojciech.sowinski@owliedev.pl"><span className="pink">{t('contactLink')}.</span></a>
+                    <Link className="pink" to={'contact'}> <span>{t('contactLink')}</span> </Link>
+
                 </motion.div>
             </div>
-            <BottomNav />
         </motion.div >
     )
 }

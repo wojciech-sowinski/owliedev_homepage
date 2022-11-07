@@ -12,8 +12,11 @@ import SimpleReactValidator from 'simple-react-validator';
 import { useState, useEffect, useRef, ReactComponent } from 'react';
 
 
+
 //components
 import PageNameSpan from "../components/PageNameSpan";
+import InfoBar from '../components/InfoBar';
+import AnimatedInfoPortal from '../components/AnimatedInfoPortal';
 
 
 const ContactPage = () => {
@@ -24,6 +27,8 @@ const ContactPage = () => {
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
     const [render, rerender] = useState(false);
+
+    const [info, setInfo] = useState('')
 
 
     const forceUpdate = () => {
@@ -43,7 +48,13 @@ const ContactPage = () => {
         e.preventDefault()
 
         if (simpleReactValidator.current.allValid()) {
-            console.log('valid');
+
+            console.log('valid sending');
+            setInfo('wysłano wiadomość')
+            // setTimeout(() => {
+            //     setInfo('')
+            // }, 5000);
+
         } else {
 
             simpleReactValidator.current.showMessages()
@@ -121,8 +132,10 @@ const ContactPage = () => {
                     </div>
                 </form>
 
-
             </div>
+            <AnimatedInfoPortal>
+                {info && <InfoBar text={info} closeHandle={setInfo} />}
+            </AnimatedInfoPortal>
         </motion.div>
     );
 }

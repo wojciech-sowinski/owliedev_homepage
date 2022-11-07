@@ -17,9 +17,8 @@ export const BottomNav = () => {
             <Star />
             <Link className={'progres-hover'} to={'#'}> <span> {t('nav.getCv')} </span> </Link>
             <Star />
-            <a className={'progres-hover'} href="mailto:wojciech.sowinski@owliedev.pl">
-                <span>{t('contactLink')}</span>
-            </a>
+            <Link className={'progres-hover'} to={'contact'}> <span>{t('contactLink')}</span> </Link>
+
         </nav>
     )
 };
