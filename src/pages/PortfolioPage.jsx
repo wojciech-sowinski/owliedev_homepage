@@ -1,5 +1,6 @@
 //css
 import '../css/PortfolioPage.scss'
+import '../css/ButonsAndLinks.scss'
 
 //media
 import portfolioImgBookin from '../media/img/bookin.png'
@@ -40,7 +41,7 @@ const PortfolioPage = () => {
             <div>
                 <div>
                     <button className='info-btn' onClick={buttonClickHandle}>i</button>
-                    <a href="#">
+                    <a href="http://bookin.owliedev.pl/" target='_blank'>
                         <img src={portfolioImgBookin} alt="bookin thumbnail" />
                         <div>
                             <p> {t('designPattern')} Booksy.pl.</p>
@@ -57,7 +58,7 @@ const PortfolioPage = () => {
                 </div>
                 <div>
                     <button className='info-btn' onClick={buttonClickHandle}>i</button>
-                    <a href="#">
+                    <a href="https://komornik-ledzinska.pl/" target='_blank'>
                         <img src={portfolioImgLeda} alt="komornik ledzinska thumbnail" />
                         <div>
                             <p> {t('homepage')} Komornika Katarzyny Ledzińskiej</p>
@@ -72,7 +73,7 @@ const PortfolioPage = () => {
                 </div>
                 <div>
                     <button className='info-btn' onClick={buttonClickHandle}>i</button>
-                    <a href="#">
+                    <a href="https://www.komornik3.pl/" target='_blank'>
                         <img src={portfolioImgGral} alt="komornik thumbnail" />
                         <div>
                             <p> {t('homepage')} Komornika Marka Gralińskiego</p>
@@ -85,7 +86,7 @@ const PortfolioPage = () => {
                 </div>
                 <div>
                     <button className='info-btn' onClick={buttonClickHandle}>i</button>
-                    <a href="#">
+                    <a href="https://muzykalnasowa.pl/" target='_blank'>
                         <img src={portfolioImgSowa} alt="muzykalnasowa thumbnail" />
                         <div>
                             <p> {t('homePageAndStore')}</p>
@@ -99,7 +100,7 @@ const PortfolioPage = () => {
                 </div>
                 <div>
                     <button className='info-btn' onClick={buttonClickHandle}>i</button>
-                    <a href="#">
+                    <a href="http://pragapoludniekomornik.pl/" target='_blank'>
                         <img src={portfolioImgLenik} alt="muzykalnasowa thumbnail" />
                         <div>
                             <p> {t('homepage')} Komornka Michała Lenika</p>
@@ -112,7 +113,7 @@ const PortfolioPage = () => {
                 </div>
                 <div>
                     <button className='info-btn' onClick={buttonClickHandle}>i</button>
-                    <a href="#">
+                    <a href="http://komornik-polkowska.pl/" target='_blank'>
                         <img src={portfolioImgPolk} alt="muzykalnasowa thumbnail" />
                         <div>
                             <p> {t('homepage')} Komornika Eweliny Polkowskiej</p>
@@ -125,7 +126,7 @@ const PortfolioPage = () => {
                 </div>
                 <div>
                     <button className='info-btn' onClick={buttonClickHandle}>i</button>
-                    <a href="#">
+                    <a href="https://tinder-clone-v-dep-client.vercel.app/" target='_blank'>
                         <img src={portfolioImgMachy} alt="muzykalnasowa thumbnail" />
                         <div>
                             <p> {t('designPattern')} Tinder</p>
@@ -142,7 +143,7 @@ const PortfolioPage = () => {
                 </div>
                 <div>
                     <button className='info-btn' onClick={buttonClickHandle}>i</button>
-                    <a href="#">
+                    <a href="http://wolominkomornik.pl/" target='_blank'>
                         <img src={portfolioImgSzym} alt="muzykalnasowa thumbnail" />
                         <div>
                             <p> {t('homepage')} Komornika Huberta Szymczaka</p>

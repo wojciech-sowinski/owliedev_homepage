@@ -12,6 +12,7 @@ import MainNav from './components/MainNav';
 import HomePage from './pages/HomePage';
 import PortfolioPage from './pages/PortfolioPage';
 import { click } from '@testing-library/user-event/dist/click';
+import ContactPage from './pages/ContactPage';
 
 function App() {
 
@@ -60,6 +61,7 @@ function App() {
             <Routes location={Location} key={Location.pathname}>
               <Route path='/' element={<HomePage />} />
               <Route path='/portfolio' element={<PortfolioPage />} />
+              <Route path='/contact' element={<ContactPage />} />
               <Route path='*' element={<HomePage />} />
             </Routes>
           </AnimatePresence>

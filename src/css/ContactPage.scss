@@ -1,0 +1,147 @@
+.contact-page {
+  > div {
+    padding: 50px 10px;
+    display: flex;
+    justify-content: center;
+    column-gap: 50px;
+    .contact-info {
+      max-width: 480px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 25px;
+      span {
+        display: flex;
+        color: #2e3337;
+        font-family: "Antonio", sans-serif;
+        font-weight: 600;
+        font-size: 2.5rem;
+        letter-spacing: -2px;
+        svg {
+          margin: 5px;
+          width: 30px;
+          fill: #ff9800;
+        }
+      }
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 30px;
+      > div {
+        position: relative;
+        button {
+          min-width: 350px;
+        }
+        label {
+          position: absolute;
+          top: 5px;
+          color: #666;
+          left: 10px;
+          font-size: 0.9rem;
+          transition: 0.3s;
+        }
+        input,
+        textarea {
+          padding: 10px;
+          min-width: 350px;
+          z-index: 0;
+          border-radius: 0;
+          border: 1px solid #666;
+          font-family: "Oswald", sans-serif;
+          font-size: 1rem;
+        }
+        input:focus,
+        textarea:focus {
+          border: 1px solid #ff9800;
+          outline: none;
+        }
+        input:focus + label,
+        input:not([value=""]) + label {
+          transform: translateY(-150%);
+          font-size: 0.7rem;
+        }
+        textarea:not(:empty) + label,
+        textarea:focus + label {
+          transform: translateY(-150%);
+          font-size: 0.7rem;
+        }
+
+        .srv-validation-message {
+          color: #ff0000;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
+
+#dark .contact-page {
+  > div {
+    .contact-info {
+      span {
+        color: #dfdfdf;
+      }
+    }
+    form {
+      > div {
+        label {
+          color: #dfdfdf;
+          cursor: text;
+        }
+        input,
+        textarea {
+          border: 1px solid #ff9800;
+          background-color: #2e3337 !important;
+          color: #dfdfdf;
+        }
+
+        input:-webkit-autofill,
+        textarea:-webkit-autofill {
+          border: 1px solid #37ccae;
+        }
+
+        input:focus,
+        textarea:focus {
+          border: 2px solid #ff9800;
+          background-color: #2e3337 !important;
+          outline: none;
+        }
+        input:focus,
+        textarea:focus {
+          border: 1px solid #ff9800;
+          background-color: #2e3337 !important;
+          outline: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .contact-page {
+    > div {
+      padding: 50px 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      row-gap: 70px;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .contact-page {
+    > div {
+      .contact-info {
+        max-width: 360px;
+        span {
+          font-size: 2rem;
+        }
+        span.pink {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}

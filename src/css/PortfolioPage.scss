@@ -6,27 +6,7 @@
     > div {
       position: relative;
       width: calc(100% / 3);
-      .info-btn {
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        width: 35px;
-        height: 35px;
-        font-family: "Lovers Quarrel", cursive;
-        background-color: var(--pink);
-        color: #fff;
-        border: none;
-        border-radius: 25px;
-        font-size: 3rem;
-        line-height: 20px;
-        cursor: pointer;
-        transition: 0.3s;
-        z-index: 1;
-        &.open {
-          background-color: var(--mint);
-          color: #000;
-        }
-      }
+
       > a {
         display: block;
         transition: 0.3s;
@@ -57,7 +37,7 @@
             padding: 5px;
           }
           span {
-            background-color: var(--mint);
+            background-color: #37ccae;
             color: #000;
             margin: 3px;
             padding: 3px 5px;
@@ -76,30 +56,6 @@
   }
 }
 
-// @media screen and (max-width: 2000px) {
-//   .portfolio-page {
-//     width: 100%;
-//     position: relative;
-//     div + div {
-//       display: flex;
-//       flex-wrap: wrap;
-//       align-content: center;
-//       div {
-//         width: calc(100% / 3);
-//         a {
-//           div {
-//             p {
-//               font-size: 0.9rem;
-//             }
-//             span {
-//               font-size: 0.7rem;
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
 @media screen and (max-width: 1024px) {
   .portfolio-page {
     position: relative;

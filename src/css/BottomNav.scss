@@ -11,22 +11,22 @@ nav.bottom-nav {
     text-transform: uppercase;
     text-decoration: none;
     column-gap: 10px;
-    color: rgb(102, 102, 102);
+    color: #2e3337;
     font-size: 1.4rem;
     overflow: hidden;
   }
   svg {
     width: 40px;
-    fill: var(--darkGray);
+    fill: #2e3337;
   }
 }
 
 #dark nav.bottom-nav {
   a {
-    color: var(--lightGray);
+    color: #dfdfdf;
   }
   svg {
-    fill: var(--lightGray);
+    fill: #dfdfdf;
   }
 }
 

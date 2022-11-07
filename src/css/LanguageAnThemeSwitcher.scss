@@ -6,9 +6,10 @@
   column-gap: 10px;
   filter: grayscale(100%);
   transition: 0.3s;
+  align-items: center;
   .language-picker {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     cursor: pointer;
     svg {
       width: 100%;
@@ -18,7 +19,7 @@
   &:hover {
     filter: grayscale(0%);
     .react-switch-handle {
-      background-color: var(--pink) !important;
+      background-color: #ff9800 !important;
     }
   }
 }

@@ -18,7 +18,7 @@ font-family: 'Oswald', sans-serif; */
   --lightGray: #dfdfdf;
   --gray: #666;
   --darkGray: #2e3337;
-  --pink: #dc143c;
+  --pink: #ff9800;
   --mint: #37ccae;
 }
 
@@ -26,19 +26,17 @@ font-family: 'Oswald', sans-serif; */
   position: relative;
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     url("../media/img/background.jpg");
-  background-color: aliceblue;
-  // background-size: cover;
-  color: var(--darkGray);
+  color: #2e3337;
   transition: 0.3s;
   overflow-x: hidden;
   .App-header {
     position: relative;
   }
   .pink {
-    color: var(--pink);
+    color: #ff9800;
   }
   a {
-    color: var(--pink);
+    color: #ff9800;
     text-decoration: none;
   }
   .page-container {

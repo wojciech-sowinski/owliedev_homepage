@@ -1,12 +1,76 @@
+button {
+  background-color: #ff9800;
+  border: none;
+  padding: 10px;
+  color: #2e3337;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #2e3337;
+  color: #ff9800;
+}
+
+#dark {
+  button {
+    background-color: #2e3337;
+    border: 1px solid #ff9800;
+    color: #dfdfdf;
+  }
+
+  button:hover {
+    background-color: #ff9800;
+    color: #2e3337;
+  }
+
+  .info-btn {
+    background-color: #ff9800;
+    color: #2e3337;
+    border: none;
+
+    &.open {
+      background-color: #37ccae;
+      color: #2e3337;
+      border: none;
+    }
+  }
+}
+
+.info-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 35px;
+  height: 35px;
+  font-family: "Lovers Quarrel", cursive;
+  background-color: #ff9800;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 3rem;
+  line-height: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 1;
+  border: none;
+  &.open {
+    background-color: #37ccae;
+    color: #2e3337;
+    border: none;
+  }
+}
+
 .progres-hover {
   background-image: linear-gradient(
     to left,
-    var(--gray) 0%,
-    var(--gray) 47%,
+    #2e3337 0%,
+    #2e3337 47%,
     #000 48%,
     #000 52%,
-    #dc143c 53%,
-    #dc143c 100%
+    #ff9800 53%,
+    #ff9800 100%
   );
   background-size: 250%;
   background-position: 100%;
@@ -23,11 +87,11 @@
 #dark .progres-hover {
   background-image: linear-gradient(
     to left,
-    var(--lightGray) 0%,
-    var(--lightGray) 47%,
+    #dfdfdf 0%,
+    #dfdfdf 47%,
     #000 48%,
     #000 52%,
-    #dc143c 53%,
-    #dc143c 100%
+    #ff9800 53%,
+    #ff9800 100%
   );
 }
