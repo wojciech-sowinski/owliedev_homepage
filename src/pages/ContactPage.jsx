@@ -10,6 +10,9 @@ import { motion } from "framer-motion"
 import { useI18n } from 'react-simple-i18n'
 import SimpleReactValidator from 'simple-react-validator';
 import { useState, useEffect, useRef, ReactComponent } from 'react';
+import axios from 'axios';
+import ReCAPTCHA from "react-google-recaptcha";
+import ClockLoader from "react-spinners/ClockLoader";
 
 
 
@@ -22,13 +25,13 @@ import AnimatedInfoPortal from '../components/AnimatedInfoPortal';
 const ContactPage = () => {
 
     const { t, i18n } = useI18n()
-
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
     const [render, rerender] = useState(false);
-
     const [info, setInfo] = useState('')
+    const [sendingMsg, setSendingMsg] = useState(false)
+    const [showRecaptcha, setShowRecaptcha] = useState(false)
 
 
     const forceUpdate = () => {
@@ -44,22 +47,54 @@ const ContactPage = () => {
         }
     ))
 
+    const clearFormFields = () => {
+        setName('')
+        setEmail('')
+        setMessage('')
+        // simpleReactValidator.current.allValid()
+        forceUpdate()
+        simpleReactValidator.current.hideMessages()
+    }
+
     const submitHandle = (e) => {
         e.preventDefault()
+        if (!showRecaptcha && simpleReactValidator.current.allValid()) {
+            setShowRecaptcha(true)
+        } else {
+            forceUpdate()
+            simpleReactValidator.current.showMessages()
+        }
+
+    }
+
+    const sendMessageHandle = () => {
 
         if (simpleReactValidator.current.allValid()) {
 
-            console.log('valid sending');
-            setInfo('wysłano wiadomość')
-            // setTimeout(() => {
-            //     setInfo('')
-            // }, 5000);
+            setSendingMsg(true)
+
+            axios.post('https://booksy-clone.vercel.app/contactsendmsg', {
+                name,
+                email,
+                message
+            })
+                .then(response => {
+                    if (response.status === 200 && response.data.result === 'message sent') {
+                        setInfo(t('messageSent'))
+                        setSendingMsg(false)
+                        setShowRecaptcha(false)
+                        clearFormFields()
+                    } else {
+                        setInfo(t('messageNotSent'))
+                        setSendingMsg(false)
+                        setShowRecaptcha(false)
+                    }
+                })
 
         } else {
-
             simpleReactValidator.current.showMessages()
+            setShowRecaptcha(false)
             forceUpdate()
-            console.log('not valid');
         }
     }
 
@@ -117,7 +152,7 @@ const ContactPage = () => {
                             name="message"
                             id="message-input"
                             cols="30"
-                            rows="10"
+                            rows="5"
                             value={message}
                             onChange={(e) => { setMessage(e.target.value) }}
                             onBlur={() => simpleReactValidator.current.showMessageFor('message')}
@@ -126,17 +161,32 @@ const ContactPage = () => {
                         {simpleReactValidator.current.message('message', message, 'required')}
                     </div>
                     <div>
+                        {showRecaptcha && <ReCAPTCHA
+                            sitekey="6LcI6u0iAAAAAFqD6EydQOH4tONEZiVb6tPU9kKi"
+                            onChange={sendMessageHandle}
+                            onExpired={() => { setShowRecaptcha(false) }}
+                        />}
+                    </div>
+                    <div>
                         <button
                             type="submit"
-                        >{t('send')}</button>
+                            disabled={(sendingMsg ? true : false) || (showRecaptcha ? true : false)}
+                        >{sendingMsg ? t('sending') : t('send')}
+                            {sendingMsg && <ClockLoader
+                                color={'#2e3337'}
+                                size={20}
+                                aria-label="Loading Spinner"
+                                data-testid="loader"
+                            />}
+                        </button>
                     </div>
                 </form>
 
-            </div>
+            </div >
             <AnimatedInfoPortal>
                 {info && <InfoBar text={info} closeHandle={setInfo} />}
             </AnimatedInfoPortal>
-        </motion.div>
+        </motion.div >
     );
 }
 

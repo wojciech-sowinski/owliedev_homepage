@@ -8,10 +8,21 @@ button {
   transition: 0.3s;
 }
 
-button:hover {
-  background-color: #2e3337;
-  color: #ff9800;
+button[type="submit"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
 }
+
+button:disabled {
+  background-color: #dfdfdf;
+}
+
+// button:hover {
+//   background-color: #2e3337;
+//   color: #ff9800;
+// }
 
 #dark {
   button {
@@ -20,10 +31,10 @@ button:hover {
     color: #ff9800;
   }
 
-  button:hover {
-    background-color: #ff9800;
-    color: #2e3337;
-  }
+  // button:hover {
+  //   background-color: #ff9800;
+  //   color: #2e3337;
+  // }
 
   .info-btn {
     background-color: #ff9800;

@@ -12,9 +12,7 @@ import { motion } from "framer-motion"
 
 const InfoBar = ({ text, closeHandle }) => {
 
-
     useEffect(() => {
-
         const closeTimer = setTimeout(() => {
             closeHandle('')
         }, 10000);
@@ -23,11 +21,9 @@ const InfoBar = ({ text, closeHandle }) => {
             clearInterval(closeTimer)
 
         }
-
     }, [])
 
     return (
-
         <motion.div
             className="info-bar"
             initial={{ x: 3000, }}
