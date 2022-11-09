@@ -12,7 +12,7 @@ import SimpleReactValidator from 'simple-react-validator';
 import { useState, useEffect, useRef, ReactComponent } from 'react';
 import axios from 'axios';
 import ReCAPTCHA from "react-google-recaptcha";
-import ClockLoader from "react-spinners/ClockLoader";
+import BounceLoader from "react-spinners/BounceLoader";
 
 
 
@@ -34,16 +34,21 @@ const ContactPage = () => {
     const [showRecaptcha, setShowRecaptcha] = useState(false)
 
 
+
     const forceUpdate = () => {
         rerender(render => !render)
     }
 
+    const formRef = useRef(null)
+
     const simpleReactValidator = useRef(new SimpleReactValidator(
         {
+
             messages: {
                 email: t('invalidEmailMessage'),
                 required: t('requredFieldMessage')
             },
+
         }
     ))
 
@@ -51,9 +56,6 @@ const ContactPage = () => {
         setName('')
         setEmail('')
         setMessage('')
-        // simpleReactValidator.current.allValid()
-        forceUpdate()
-        simpleReactValidator.current.hideMessages()
     }
 
     const submitHandle = (e) => {
@@ -100,6 +102,8 @@ const ContactPage = () => {
 
     useEffect(() => {
         simpleReactValidator.current.hideMessages()
+        // simpleReactValidator.current.showMessages = false
+
     }, [render])
 
 
@@ -122,7 +126,8 @@ const ContactPage = () => {
                 </div>
                 <form
                     className='contact-form'
-                    onSubmit={submitHandle} >
+                    onSubmit={submitHandle}
+                    ref={formRef}>
                     <div>
                         <input
                             id='name-input'
@@ -130,10 +135,11 @@ const ContactPage = () => {
                             name='name'
                             onChange={(e) => { setName(e.target.value) }}
                             value={name}
-                            onBlur={() => simpleReactValidator.current.showMessageFor('name')}
+                            onFocus={() => simpleReactValidator.current.showMessageFor('name')}
                         />
                         <label htmlFor='name-input'>{`${t('firstName')}, ${t('lastName')}`}</label>
                         {simpleReactValidator.current.message('name', name, 'required')}
+
                     </div>
                     <div>
                         <input
@@ -172,8 +178,8 @@ const ContactPage = () => {
                             type="submit"
                             disabled={(sendingMsg ? true : false) || (showRecaptcha ? true : false)}
                         >{sendingMsg ? t('sending') : t('send')}
-                            {sendingMsg && <ClockLoader
-                                color={'#2e3337'}
+                            {sendingMsg && <BounceLoader
+                                color={'#37ccae'}
                                 size={20}
                                 aria-label="Loading Spinner"
                                 data-testid="loader"

@@ -17,6 +17,7 @@ button[type="submit"] {
 
 button:disabled {
   background-color: #dfdfdf;
+  cursor: not-allowed;
 }
 
 // button:hover {

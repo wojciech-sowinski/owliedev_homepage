@@ -48,7 +48,7 @@ const langData = {
       designPattern:'Projekt wykonany na wzór',
       homepage:'Strona domowa',
       homePageAndStore:'Strona domowa i sklep projektu Muzykalnasowa.pl.',
-      invalidEmailMessage:'* adres email jest niepawidłowy',
+      invalidEmailMessage:'* adres email jest nieprawidłowy',
       requredFieldMessage:'* to pole jest wymagane',
       homeInfo:{
         text1:'Chcesz mieć swoje miejsce w sieci? Poszerzyć swoją sprzedaż przenosząc ją do internetu?',
