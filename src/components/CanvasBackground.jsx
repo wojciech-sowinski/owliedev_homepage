@@ -4,24 +4,27 @@ import ReactDOM from "react-dom";
 import { useState } from "react";
 
 const CanvasBackground = ({ darkMode }) => {
+  const canvasRef = useRef(null);
+  const [play, setPlay] = useState(true);
 
-  const canvasRef = useRef(null)
-  const [play, setPlay] = useState(true)
-
-  const canvasRender = () => {
-  };
+  const canvasRender = () => {};
 
   useEffect(() => {
+    const polygonsCount = (window.innerWidth * window.innerHeight) / 20000;
 
-    const polygonsCount = window.innerWidth * window.innerHeight / 10000
-
-    let requestFrameId
-    const canvas = canvasRef.current
+    let requestFrameId;
+    let fps;
+    const canvas = canvasRef.current;
     const fill = darkMode ? `rgba(30,30,30,1)` : `rgba(255,255,255,1)`;
-    const refreshFill = darkMode ? `rgba(30,30,30,0.1)` : `rgba(255,255,255,0.1)`;
-    const lineColor = darkMode ? 'rgba(60, 60, 60,0.1)' : 'rgba(210, 210, 210, 0.1)'
-    const activeLineColor = darkMode ? 'rgba(255, 152, 0, 0.08)' : 'rgba(255, 152, 0, 0.1)'
-
+    const refreshFill = darkMode
+      ? `rgba(30,30,30,0.1)`
+      : `rgba(255,255,255,0.1`;
+    const lineColor = darkMode
+      ? "rgba(40, 40, 40,1)"
+      : "rgba(235, 235, 235, 1)";
+    const activeLineColor = darkMode
+      ? "rgba(80, 55, 0, 1)"
+      : "rgb(255, 195, 106)";
 
     //mouse action
     const mouse = {
@@ -33,7 +36,6 @@ const CanvasBackground = ({ darkMode }) => {
       mouse.y = e.y;
     });
 
-
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     const ctx = canvas.getContext("2d");
@@ -44,14 +46,15 @@ const CanvasBackground = ({ darkMode }) => {
     ctx.fillStyle = fill;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-
     window.addEventListener("resize", () => {
-
-      console.log(window.innerWidth * window.innerHeight / 10000);
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
       const polygons = [];
-      for (let i = 0; i < window.innerWidth * window.innerHeight / 10000; i++) {
+      for (
+        let i = 0;
+        i < (window.innerWidth * window.innerHeight) / 10000;
+        i++
+      ) {
         polygons.push(new Polygon());
       }
       ctx.fillStyle = fill;
@@ -59,21 +62,21 @@ const CanvasBackground = ({ darkMode }) => {
     });
 
     const Polygon = function () {
-
       this.x = 0;
       this.y = 0;
       this.originX = Math.random() * canvas.clientWidth;
       this.originY = Math.random() * canvas.clientHeight;
       this.radius = 3000;
-      this.polygonRadius = Math.random() * 60
+      this.polygonRadius = Math.random() * 60;
       this.sides = 3;
       this.rotate = 100 * Math.random();
-      this.rotationSpeed = Math.random() - 0.5;
-      this.moveSpeedX = (Math.random() - 0.5) / 2;
-      this.moveSpeedY = (Math.random() - 0.5) / 2;
+      this.rotationSpeed = Math.random() / 3 - 0.15;
+      this.moveSpeedX = (Math.random() - 0.5) / 5;
+      this.moveSpeedY = (Math.random() - 0.5) / 5;
       this.color = lineColor;
 
       this.draw = function () {
+        ctx.save();
 
         if (
           mouse.x > this.originX - 100 &&
@@ -81,7 +84,6 @@ const CanvasBackground = ({ darkMode }) => {
           mouse.y > this.originY - 100 &&
           mouse.y < this.originY + 100
         ) {
-
           this.color = activeLineColor;
         } else {
           this.color = lineColor;
@@ -89,7 +91,6 @@ const CanvasBackground = ({ darkMode }) => {
 
         const angle = (Math.PI * 2) / this.sides;
 
-        ctx.save();
         ctx.translate(this.originX, this.originY);
         ctx.rotate((this.rotate * Math.PI) / 180);
         ctx.beginPath();
@@ -114,7 +115,7 @@ const CanvasBackground = ({ darkMode }) => {
 
       this.update = function () {
         this.rotate += this.rotationSpeed / 2;
-        this.radius < this.rotationSpeed * 100 && (this.radius += 0.1);
+        this.radius < this.rotationSpeed * 10 && (this.radius += 0.1);
         if (this.originX > canvas.width || this.originX < 0) {
           this.moveSpeedX = -this.moveSpeedX;
         }
@@ -132,26 +133,27 @@ const CanvasBackground = ({ darkMode }) => {
     }
 
     const animate = function () {
-      ctx.fillStyle = refreshFill;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      polygons.forEach((polygon) => {
-        polygon.draw();
-        polygon.update();
-      });
-      requestFrameId = window.requestAnimationFrame(animate);
-    }
+      fps = setTimeout(() => {
+        ctx.fillStyle = refreshFill;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        polygons.forEach((polygon) => {
+          polygon.draw();
+          polygon.update();
+        });
+        requestFrameId = window.requestAnimationFrame(animate);
+      }, 1000 / 30);
+    };
 
-    animate()
+    animate();
 
     return () => {
-      window.cancelAnimationFrame(requestFrameId)
-    }
-
+      clearTimeout(fps);
+      window.cancelAnimationFrame(requestFrameId);
+    };
   }, [darkMode]);
 
   return ReactDOM.createPortal(
-    <canvas id={"canvas-background"} ref={canvasRef}>
-    </canvas>,
+    <canvas id={"canvas-background"} ref={canvasRef}></canvas>,
     document.body
   );
 };
