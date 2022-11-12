@@ -2,7 +2,8 @@
 import '../css/MainNav.scss'
 
 //media
-import Logo from '../media/img/logo-vert-1000-2.svg';
+// import Logo from '../media/img/logo-vert-1000-2.svg';
+import { ReactComponent as Logo } from '../media/img/logo-vert-1000-2.svg'
 
 //dependencies
 import React, { useState } from 'react';
@@ -43,7 +44,7 @@ const MainNav = ({ darkMode, toogleDarkModeHandle }) => {
                 className={'central-logo'}
                 to={'/'}>
                 <div>
-                    <img src={Logo} alt="logo ovliedev" />
+                    <Logo />
                 </div>
             </NavLink>
             <NavLink

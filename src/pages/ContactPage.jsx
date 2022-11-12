@@ -13,6 +13,8 @@ import { useState, useEffect, useRef, ReactComponent } from 'react';
 import axios from 'axios';
 import ReCAPTCHA from "react-google-recaptcha";
 import BounceLoader from "react-spinners/BounceLoader";
+import React from "react";
+import ReactDOM from "react-dom";
 
 
 
@@ -115,6 +117,7 @@ const ContactPage = () => {
             exit={{ x: -1000, opacity: 0 }}
             transition={{ duration: 0.5 }}
         >
+            {/* {showInfoBarHandle()} */}
             <PageNameSpan name={t('nav.contact')} />
             <div>
                 <div className="contact-info">
@@ -187,7 +190,6 @@ const ContactPage = () => {
                         </button>
                     </div>
                 </form>
-
             </div >
             <AnimatedInfoPortal>
                 {info && <InfoBar text={info} closeHandle={setInfo} />}

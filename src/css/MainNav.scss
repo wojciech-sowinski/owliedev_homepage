@@ -29,8 +29,9 @@ nav.main-nav {
       font-weight: 600;
       letter-spacing: -3px;
     }
-    &.central-logo img {
+    &.central-logo svg {
       width: 200px;
+      fill: #666;
     }
     &.bottom-logo {
       display: none;

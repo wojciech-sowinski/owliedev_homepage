@@ -54,7 +54,6 @@ function App() {
   return (
     <div className="App" id={darkMode ? "dark" : ""}>
       <CanvasBackground darkMode={darkMode} />
-
       <header className="App-header">
         <MainNav
           darkMode={darkMode}
