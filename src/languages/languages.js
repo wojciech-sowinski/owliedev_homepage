@@ -31,7 +31,8 @@ const langData = {
         portfolio:'portfolio',
         contact:'contact',
         seePortfolio:'see my portfolio',
-        getCv:'download cv'
+        getCv:'download cv',
+        gitHub:'gitHub'
       },
     },
     pl: {
@@ -66,7 +67,8 @@ const langData = {
         portfolio:'portfolio',
         contact:'kontakt',
         seePortfolio:'Zobacz moje portfolio',
-        getCv:'Pobierz cv'
+        getCv:'Pobierz cv',
+        gitHub:'gitHub'
       },
     },
   }

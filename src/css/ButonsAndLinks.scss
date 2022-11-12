@@ -89,6 +89,14 @@ button:disabled {
   transition: 1s;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  span {
+    display: flex;
+    align-items: center;
+    svg {
+      width: 30px;
+      margin: 0 5px;
+    }
+  }
   &:hover {
     left: 0%;
     transition: 1s;

@@ -34,6 +34,7 @@ body {
   color: #2e3337;
   transition: 0.3s;
   overflow-x: hidden;
+  overflow-y: hidden;
   .App-header {
     position: relative;
   }
@@ -46,13 +47,16 @@ body {
   }
   .page-container {
     width: 100%;
-    min-height: 80vh;
   }
   #Info-Portal {
     position: fixed;
     width: 100%;
     bottom: 50%;
     transform: translateY(50%);
+  }
+  footer {
+    padding: 20px;
+    min-height: 100px;
   }
 }
 #canvas-background {
@@ -67,4 +71,20 @@ body {
 
   // background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
   //   url("../media/img/background.jpg");
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff9800;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #666;
 }
