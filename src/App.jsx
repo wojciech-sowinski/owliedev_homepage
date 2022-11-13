@@ -16,6 +16,7 @@ import ContactPage from "./pages/ContactPage";
 import { BottomNav } from "./components/BottomNav";
 import AnimatedInfoPortal from "./components/AnimatedInfoPortal";
 import CanvasBackground from "./components/CanvasBackground";
+import AboutPage from "./pages/AboutPage";
 
 function App() {
   const Location = useLocation();
@@ -67,6 +68,7 @@ function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="/portfolio" element={<PortfolioPage />} />
               <Route path="/contact" element={<ContactPage />} />
+              <Route path="/about" element={<AboutPage />} />
               <Route path="*" element={<HomePage />} />
             </Routes>
           </AnimatePresence>

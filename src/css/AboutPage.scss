@@ -1,0 +1,31 @@
+.about-page {
+  min-height: 65vh;
+
+  .about-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 100px;
+    padding: 30px;
+    .personal-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 30px;
+      img {
+        max-width: 250px;
+        border-radius: 200px;
+      }
+      p {
+        max-width: 400px;
+        font-size: 1.5rem;
+      }
+    }
+    .skill-info {
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 5px;
+    }
+  }
+}

@@ -7,7 +7,7 @@ const CanvasBackground = ({ darkMode }) => {
   const canvasRef = useRef(null);
   const [play, setPlay] = useState(true);
 
-  const canvasRender = () => {};
+  const canvasRender = () => { };
 
   useEffect(() => {
     const polygonsCount = (window.innerWidth * window.innerHeight) / 20000;
@@ -71,8 +71,8 @@ const CanvasBackground = ({ darkMode }) => {
       this.sides = 3;
       this.rotate = 100 * Math.random();
       this.rotationSpeed = Math.random() / 3 - 0.15;
-      this.moveSpeedX = (Math.random() - 0.5) / 5;
-      this.moveSpeedY = (Math.random() - 0.5) / 5;
+      this.moveSpeedX = (Math.random() - 0.5);
+      this.moveSpeedY = (Math.random() - 0.5);
       this.color = lineColor;
 
       this.draw = function () {
