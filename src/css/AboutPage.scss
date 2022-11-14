@@ -5,7 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap: 100px;
+    column-gap: 60px;
     padding: 30px;
     .personal-info {
       display: flex;
@@ -13,8 +13,9 @@
       align-items: center;
       row-gap: 30px;
       img {
-        max-width: 250px;
+        max-width: 200px;
         border-radius: 200px;
+        border: 1px solid #666;
       }
       p {
         max-width: 400px;
@@ -25,7 +26,36 @@
       width: 400px;
       display: flex;
       flex-direction: column;
-      row-gap: 5px;
+      row-gap: 10px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .about-info {
+      flex-direction: column;
+      row-gap: 60px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .about-info {
+      .skill-info {
+        width: 100%;
+      }
+    }
+  }
+}
+
+#dark {
+  .about-page {
+    .about-info {
+      .personal-info {
+        img {
+          border: 1px solid orange;
+        }
+        p {
+          color: #dfdfdf;
+        }
+      }
     }
   }
 }

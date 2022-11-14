@@ -34,7 +34,7 @@ nav.bottom-nav {
   nav.bottom-nav {
     column-gap: 20px;
     a {
-      font-size: 0.9rem;
+      font-size: 1rem;
     }
     > svg {
       width: 30px;
@@ -51,7 +51,6 @@ nav.bottom-nav {
       font-size: 1.4rem;
     }
     > svg {
-      width: 30px;
       display: none;
     }
   }

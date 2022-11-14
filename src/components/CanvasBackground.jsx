@@ -7,7 +7,6 @@ const CanvasBackground = ({ darkMode }) => {
   const canvasRef = useRef(null);
   const [play, setPlay] = useState(true);
 
-  const canvasRender = () => { };
 
   useEffect(() => {
     const polygonsCount = (window.innerWidth * window.innerHeight) / 20000;
