@@ -38,6 +38,7 @@ const AboutPage = () => {
                     <img src={Face} alt="" />
                     <p>
                         <span className='pink'>Witaj! </span>
+                        Mam na imię Wojtek.
                         Jestem początkującym Front-End Developerem.
                         Pasjonuję się efektami interfejsu użytkownika, animacjami oraz tworzeniem intuicyjnych, dynamicznych stron i sklepów dla osób takich jak Ty. W wolnych chwilach aranżacja muzyczna oraz turystyka motocyklowa.
 
@@ -58,7 +59,7 @@ const AboutPage = () => {
                     <ProgressBar text={'REACT'} progress={65} order={4} />
                     <ProgressBar text={'Node.JS'} progress={50} order={5} />
                     <ProgressBar text={'MongoDB'} progress={50} order={6} />
-                    <ProgressBar text={'SQL'} progress={10} order={7} />
+                    <ProgressBar text={'SQL'} progress={30} order={7} />
                     <ProgressBar text={'WordPress'} progress={60} order={8} />
                     <ProgressBar text={'GIMP'} progress={70} order={9} />
                     <ProgressBar text={'InkScape'} progress={40} order={10} />

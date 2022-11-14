@@ -1,6 +1,6 @@
 const langData = {
     en: {
-      hello:'Hello.',
+      hello:'Hello on',
       firstName:'First Name',
       lastName:'Last Name',
       messageContent:'Message content...',
@@ -36,7 +36,7 @@ const langData = {
       },
     },
     pl: {
-      hello:'Witaj.',
+      hello:'Witaj na',
       firstName:'Imię',
       lastName:'Nazwisko',
       messageContent:'Treść wiadomości...',
@@ -52,8 +52,8 @@ const langData = {
       invalidEmailMessage:'* adres email jest nieprawidłowy',
       requredFieldMessage:'* to pole jest wymagane',
       homeInfo:{
-        text1:'Chcesz mieć swoje miejsce w sieci? Poszerzyć swoją sprzedaż przenosząc ją do internetu?',
-        text2:'Chcesz zaprezentować swoją firmę ułatwiając klientom kontakt z Tobą?'
+        text1:'Chcesz mieć swoje miejsce w sieci? Poszerz swoją sprzedaż przenosząc ją do internetu.',
+        text2:'Zaprzentuj swoją firmę w internecie ułatwiając klientom kontakt z Tobą.'
       },
       contactInfo:{
         haveQuestions:'Masz pytania? ',

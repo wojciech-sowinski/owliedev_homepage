@@ -33,7 +33,7 @@ const HomePage = () => {
                     whileInView={{ scale: 1, opacity: 1 }}
                     transition={{ delay: 0.5 }}
                 >
-                    <span className="pink">{t('hello')} </span>
+                    <span className="pink">{t('hello')} <h1>OwlieDev.pl</h1></span>
                     <span>{t('homeInfo.text1')}</span>
                 </motion.div>
                 <div><img src={face} alt="author face" /></div>
