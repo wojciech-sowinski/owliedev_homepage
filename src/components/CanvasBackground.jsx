@@ -8,8 +8,35 @@ const CanvasBackground = ({ darkMode }) => {
   const [play, setPlay] = useState(true);
 
 
+  function browserPerf() {
+    //opera has problem with canvas render - reduce multiplier to 0.1 or 0.2
+
+    const userAgent = navigator.userAgent
+    if (userAgent.includes("Firefox")) {
+      return 1;
+    } else if (userAgent.includes("SamsungBrowser")) {
+      return 0.1;
+    } else if (userAgent.includes("Opera") || userAgent.includes("OPR")) {
+      return 0.2;
+    } else if (userAgent.includes("Trident")) {
+      return 1;
+    } else if (userAgent.includes("Edge")) {
+      return 1;
+    } else if (userAgent.includes("Edg")) {
+      return 1;
+    } else if (userAgent.includes("Chrome")) {
+      return 1;
+    } else if (userAgent.includes("Safari")) {
+      return 0.1;
+    } else {
+      return 0.1;
+    }
+  }
+
+
   useEffect(() => {
-    const polygonsCount = (window.innerWidth * window.innerHeight) / 20000;
+
+    const polygonsCount = ((window.innerWidth * window.innerHeight) / 20000) * browserPerf();
 
     let requestFrameId;
     let fps;
@@ -51,7 +78,7 @@ const CanvasBackground = ({ darkMode }) => {
       const polygons = [];
       for (
         let i = 0;
-        i < (window.innerWidth * window.innerHeight) / 10000;
+        i < (window.innerWidth * window.innerHeight) / 20000;
         i++
       ) {
         polygons.push(new Polygon());
