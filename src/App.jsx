@@ -11,18 +11,15 @@ import { useI18n } from "react-simple-i18n";
 import MainNav from "./components/MainNav";
 import HomePage from "./pages/HomePage";
 import PortfolioPage from "./pages/PortfolioPage";
-import { click } from "@testing-library/user-event/dist/click";
 import ContactPage from "./pages/ContactPage";
 import { BottomNav } from "./components/BottomNav";
-import AnimatedInfoPortal from "./components/AnimatedInfoPortal";
 import CanvasBackground from "./components/CanvasBackground";
 import AboutPage from "./pages/AboutPage";
 
 function App() {
   const Location = useLocation();
   const [darkMode, setDarkMode] = useState(false);
-  const [language, setLanguage] = useState("pl");
-  const { t, i18n } = useI18n();
+  const { i18n } = useI18n();
 
   const parseCookie = (str) =>
     str

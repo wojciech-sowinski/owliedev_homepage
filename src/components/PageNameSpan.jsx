@@ -15,7 +15,7 @@ const PageNameSpan = ({ name }) => {
 
     return (
         <div className="active-page-indicator" ref={ref}>
-            <span>{name}</span>
+            <h1>{name}</h1>
         </div>
     );
 }

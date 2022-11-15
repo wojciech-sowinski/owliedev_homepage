@@ -60,7 +60,7 @@ const MainNav = ({ darkMode, toogleDarkModeHandle }) => {
             < NavLink
                 className={'bottom-logo'} to={'/'}>
                 <div>
-                    <img src={Logo} alt="logo ovliedev" />
+                    <img src={Logo} alt="logo ovliedev" title="owliedev.pl logo" />
                 </div>
             </NavLink>
             <LanguageAnThemeSwitch darkMode={darkMode} toogleDarkModeHandle={toogleDarkModeHandle} />

@@ -35,13 +35,19 @@ const langData = {
     },
     nav: {
       home: "Home",
-      about: "about me",
-      portfolio: "portfolio",
-      contact: "contact",
+      about: "About me",
+      portfolio: "Portfolio",
+      contact: "Contact",
       seePortfolio: "see my portfolio",
       getCv: "download cv",
       gitHub: "gitHub",
     },
+    metaDesc:{
+      about:"Basic information about the author of the page.",
+      contact:"Have questions? Do you want to know more about my offer? Contact me.",
+      portfolio:"Check out my portfolio and visit the websites of companies that have become my client." ,
+      home:"Welcome to OwlieDev.pl Do you want to have your own place on the web? Move your sales online. Present your company on the Internet, making it easier for customers to contact you."
+    }
   },
   pl: {
     hello: "Witaj na",
@@ -79,13 +85,19 @@ const langData = {
     },
     nav: {
       home: "Główna",
-      about: "o mnie",
-      portfolio: "portfolio",
-      contact: "kontakt",
+      about: "O mnie",
+      portfolio: "Portfolio",
+      contact: "Kontakt",
       seePortfolio: "Zobacz moje portfolio",
       getCv: "Pobierz cv",
       gitHub: "gitHub",
     },
+    metaDesc:{
+      about:"Podstawowe informacje o autorze strony.",
+      contact:"Masz pytania? Chcesz poznać bliżej moją ofertę? Skontaktuj się ze mną."      ,
+      portfolio:"Sprawdź moje portfolio i odwiedź strony firm które zostały moim klientem.",
+      home:"Witaj na OwlieDev.pl Chcesz mieć swoje miejsce w sieci? Przenieś swoją sprzedaż do internetu. Zaprezentuj swoją firmę w internecie ułatwiając klientom kontakt z Tobą."
+    }
   },
 };
 
