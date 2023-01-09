@@ -59,8 +59,6 @@ const AboutPage = () => {
             <ProgressBar text={"SQL"} progress={30} order={7} />
             <ProgressBar text={"WordPress"} progress={60} order={8} />
             <ProgressBar text={"GIMP"} progress={70} order={9} />
-            <ProgressBar text={"InkScape"} progress={40} order={10} />
-            <ProgressBar text={"DaVinci Resolve"} progress={30} order={10} />
           </div>
         </div>
       </motion.div>

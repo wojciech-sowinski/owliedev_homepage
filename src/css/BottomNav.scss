@@ -1,23 +1,29 @@
 nav.bottom-nav {
   display: flex;
-  column-gap: 30px;
-  justify-content: center;
+  flex-direction: column;
   padding: 50px 30px;
-  a {
-    position: relative;
-    align-items: center;
+  row-gap: 30px;
+  div {
+    column-gap: 30px;
+    justify-content: center;
+
     display: flex;
-    font-family: "Antonio", sans-serif;
-    text-transform: uppercase;
-    text-decoration: none;
-    column-gap: 10px;
-    color: #2e3337;
-    font-size: 1.4rem;
-    overflow: hidden;
-  }
-  svg {
-    width: 40px;
-    fill: #2e3337;
+    a {
+      position: relative;
+      align-items: center;
+      display: flex;
+      font-family: "Antonio", sans-serif;
+      text-transform: uppercase;
+      text-decoration: none;
+      column-gap: 10px;
+      color: #2e3337;
+      font-size: 1.4rem;
+      overflow: hidden;
+    }
+    svg {
+      width: 40px;
+      // fill: #2e3337;
+    }
   }
 }
 
@@ -32,26 +38,34 @@ nav.bottom-nav {
 
 @media only screen and (max-width: 1024px) {
   nav.bottom-nav {
-    column-gap: 20px;
-    a {
-      font-size: 1rem;
-    }
-    > svg {
-      width: 30px;
+    div {
+      column-gap: 20px;
+      a {
+        font-size: 1rem;
+        svg {
+          width: 30px;
+        }
+      }
+      > svg {
+        width: 30px;
+      }
     }
   }
 }
 @media only screen and (max-width: 768px) {
   nav.bottom-nav {
-    flex-direction: column;
-    row-gap: 10px;
     padding: 10px;
-    align-items: center;
-    a {
-      font-size: 1.4rem;
-    }
-    > svg {
-      display: none;
+    row-gap: 10px;
+    div {
+      row-gap: 10px;
+      align-items: center;
+      flex-direction: column;
+      a {
+        font-size: 1.4rem;
+      }
+      > svg {
+        display: none;
+      }
     }
   }
 }

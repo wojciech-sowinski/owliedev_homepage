@@ -95,12 +95,24 @@ button:disabled {
     svg {
       width: 30px;
       margin: 0 5px;
+      fill: #2e3337;
+      transition: 0.2s;
     }
   }
   &:hover {
     left: 0%;
     transition: 1s;
     background-position: 0%;
+
+    span {
+      display: flex;
+      align-items: center;
+      svg {
+        transition: 0.1s;
+        transition-delay: 0.4s;
+        fill: orange;
+      }
+    }
   }
 }
 
