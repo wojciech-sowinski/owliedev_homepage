@@ -3,14 +3,15 @@ import '../css/PortfolioPage.scss'
 import '../css/ButonsAndLinks.scss'
 
 //media
-import portfolioImgBookin from '../media/img/bookin.png'
-import portfolioImgLeda from '../media/img/komornikledzinska.png'
-import portfolioImgGral from '../media/img/komornik3.png'
-import portfolioImgSowa from '../media/img/muzykalnasowa.png'
-import portfolioImgLenik from '../media/img/komorniklenik.png'
-import portfolioImgPolk from '../media/img/komornkpolkowska.png'
-import portfolioImgMachy from '../media/img/machymachy.png'
-import portfolioImgSzym from '../media/img/komotrnikszymczak.png'
+import portfolioImgBookin from '../media/img/bookin.webp'
+import portfolioImgLeda from '../media/img/komornikledzinska.webp'
+import portfolioImgGral from '../media/img/komornik3.webp'
+import portfolioImgSowa from '../media/img/muzykalnasowa.webp'
+import portfolioImgLenik from '../media/img/komorniklenik.webp'
+import portfolioImgPolk from '../media/img/komornkpolkowska.webp'
+import portfolioImgMachy from '../media/img/machymachy.webp'
+import portfolioImgSzym from '../media/img/komotrnikszymczak.webp'
+import portfolioImgPytel from '../media/img/komornikpytel.webp'
 
 
 //dependencies
@@ -50,6 +51,23 @@ const PortfolioPage = () => {
                     <div>
                         <button className='info-btn' onClick={buttonClickHandle}>i</button>
                         <a
+                            href="https://komornik-sochaczew.pl/"
+                            target='_blank'
+                            rel="noreferrer">
+                            <img src={portfolioImgPytel} alt="komornik Damian Pytel thumbnail" />
+                            <div>
+                                <p> {t('homepage')} Komornika Damiana Pytel</p>
+                                <p> {t('tehnologiesUsed')}</p>
+                                <p>
+                                    <span>Wordpress</span>
+                                    <span>JavaScript</span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <button className='info-btn' onClick={buttonClickHandle}>i</button>
+                        <a
                             href="http://bookin.owliedev.pl/"
                             target='_blank'
                             rel="noreferrer">
@@ -67,6 +85,7 @@ const PortfolioPage = () => {
                             </div>
                         </a>
                     </div>
+
                     <div>
                         <button className='info-btn' onClick={buttonClickHandle}>i</button>
                         <a
