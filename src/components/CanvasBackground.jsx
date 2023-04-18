@@ -24,7 +24,7 @@ const CanvasBackground = ({ darkMode }) => {
     } else if (userAgent.includes("Edg")) {
       return 1;
     } else if (userAgent.includes("Chrome")) {
-      return 1;
+      return 0.3;
     } else if (userAgent.includes("Safari")) {
       return 0.1;
     } else {

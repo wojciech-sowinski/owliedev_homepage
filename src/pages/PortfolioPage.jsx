@@ -12,6 +12,7 @@ import portfolioImgPolk from '../media/img/komornkpolkowska.webp'
 import portfolioImgMachy from '../media/img/machymachy.webp'
 import portfolioImgSzym from '../media/img/komotrnikszymczak.webp'
 import portfolioImgPytel from '../media/img/komornikpytel.webp'
+import portfolioImgRm from '../media/img/rmproperties.webp'
 
 
 //dependencies
@@ -48,6 +49,24 @@ const PortfolioPage = () => {
             >
                 <PageNameSpan name={t('nav.portfolio')} />
                 <div>
+                    <div>
+                        <button className='info-btn' onClick={buttonClickHandle}>i</button>
+                        <a
+                            href="http://rm.owliedev.pl/"
+                            target='_blank'
+                            rel="noreferrer">
+                            <img src={portfolioImgRm} alt="RM Properties" />
+                            <div>
+                                <p> {t('homepage')} RM Properties</p>
+                                <p> {t('tehnologiesUsed')}</p>
+                                <p>
+                                    <span>Wordpress</span>
+                                    <span>PHP</span>
+                                    <span>JS</span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
                     <div>
                         <button className='info-btn' onClick={buttonClickHandle}>i</button>
                         <a
